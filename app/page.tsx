@@ -55,9 +55,9 @@ export default function Home() {
             </p>
 
             <h1 className="text-7xl lg:text-8xl font-bold leading-none mb-8">
-              Michael
+              Surojbek
               <br />
-              Tokhirjonov
+              Michael
             </h1>
 
             <p className="text-lg text-gray-300 max-w-xl mb-8">
@@ -93,7 +93,7 @@ export default function Home() {
               </a>
 
               <a
-                href="/cv.pdf"
+                href="/documents/Surojbek_Sailkhonov_Resume.pdf"
                 download
                 className="border border-white/20 hover:border-white/40 transition px-8 py-4 rounded-xl font-medium"
               >
@@ -105,25 +105,25 @@ export default function Home() {
           <div className="flex justify-center relative">
             <div
               className="
-			absolute
-			w-[450px]
-			h-[450px]
-			bg-blue-500/20
-			blur-[120px]
-			rounded-full
-		"
+                    absolute
+                    w-[450px]
+                    h-[450px]
+                    bg-blue-500/20
+                    blur-[120px]
+                    rounded-full
+                  "
             />
 
             <div
               className="
-    w-[420px]
-    h-[520px]
-    rounded-3xl
-    overflow-hidden
-    border
-    border-white/10
-    relative
-  "
+                    w-[420px]
+                    h-[520px]
+                    rounded-3xl
+                    overflow-hidden
+                    border
+                    border-white/10
+                    relative
+                  "
             >
               <img
                 src="/images/n-casual.png"
@@ -324,57 +324,69 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
+            {/* Frontend */}
             <div className="premium-card p-8">
               <h3 className="text-2xl font-semibold mb-6">
                 Frontend
               </h3>
 
-              <div className="space-y-3 text-gray-300">
-                <p>React</p>
-                <p>Next.js</p>
-                <p>TypeScript</p>
-                <p>JavaScript</p>
-                <p>SCSS</p>
-                <p>Tailwind CSS</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="skill-badge">React</span>
+                <span className="skill-badge">Next.js</span>
+                <span className="skill-badge">TypeScript</span>
+                <span className="skill-badge">JavaScript</span>
+                <span className="skill-badge">Redux</span>
+                <span className="skill-badge">SCSS</span>
+                <span className="skill-badge">Tailwind CSS</span>
+                <span className="skill-badge">Material UI</span>
               </div>
             </div>
 
+            {/* Backend */}
             <div className="premium-card p-8">
               <h3 className="text-2xl font-semibold mb-6">
                 Backend
               </h3>
 
-              <div className="space-y-3 text-gray-300">
-                <p>Node.js</p>
-                <p>NestJS</p>
-                <p>GraphQL</p>
-                <p>REST API</p>
-                <p>Apollo</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="skill-badge">Node.js</span>
+                <span className="skill-badge">NestJS</span>
+                <span className="skill-badge">Express.js</span>
+                <span className="skill-badge">GraphQL</span>
+                <span className="skill-badge">REST API</span>
+                <span className="skill-badge">Apollo</span>
+                <span className="skill-badge">JWT</span>
+                <span className="skill-badge">WebSocket</span>
               </div>
             </div>
 
+            {/* Database */}
             <div className="premium-card p-8">
               <h3 className="text-2xl font-semibold mb-6">
                 Database
               </h3>
 
-              <div className="space-y-3 text-gray-300">
-                <p>MongoDB</p>
-                <p>Mongoose</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="skill-badge">MongoDB</span>
+                <span className="skill-badge">Mongoose</span>
+                <span className="skill-badge">MySQL</span>
               </div>
             </div>
 
+            {/* DevOps */}
             <div className="premium-card p-8">
               <h3 className="text-2xl font-semibold mb-6">
                 DevOps
               </h3>
 
-              <div className="space-y-3 text-gray-300">
-                <p>Docker</p>
-                <p>Linux</p>
-                <p>Nginx</p>
-                <p>Git</p>
-                <p>GitHub</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="skill-badge">Docker</span>
+                <span className="skill-badge">Linux</span>
+                <span className="skill-badge">Nginx</span>
+                <span className="skill-badge">PM2</span>
+                <span className="skill-badge">Git</span>
+                <span className="skill-badge">GitHub</span>
+                <span className="skill-badge">VPS</span>
               </div>
             </div>
 
@@ -593,15 +605,15 @@ export default function Home() {
 
                 <div className="flex flex-wrap gap-2">
 
-                  <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                  <span className="tech-badge">
                     React
                   </span>
 
-                  <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                  <span className="tech-badge">
                     Node.js
                   </span>
 
-                  <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                  <span className="tech-badge">
                     MongoDB
                   </span>
 
@@ -630,15 +642,15 @@ export default function Home() {
 
                 <div className="flex flex-wrap gap-2">
 
-                  <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                  <span className="tech-badge">
                     Next.js
                   </span>
 
-                  <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                  <span className="tech-badge">
                     GraphQL
                   </span>
 
-                  <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                  <span className="tech-badge">
                     MongoDB
                   </span>
 
