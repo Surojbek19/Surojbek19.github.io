@@ -20,7 +20,64 @@
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at top center,
+      rgba(59, 130, 246, 0.12),
+      transparent 40%),
+    var(--background);
+
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.background-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -9;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px),
+    linear-gradient(90deg,
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px);
+
+  background-size: 40px 40px;
+
+  pointer-events: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.premium-card {
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.04);
+
+  transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.3);
+
+  box-shadow: 0 0 60px rgba(59, 130, 246, 0.12);
+}
+
+.tech-badge {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #60a5fa;
 }
