@@ -393,6 +393,20 @@ export default function Home() {
                   <span className="skill-badge">VPS</span>
                 </div>
               </div>
+              {/* AI / ML */}
+              <div className="premium-card p-8">
+                <h3 className="text-2xl font-semibold mb-6">
+                  AI / ML
+                </h3>
+
+                <div className="flex flex-wrap gap-2">
+                  <span className="skill-badge">Python</span>
+                  <span className="skill-badge">NumPy</span>
+                  <span className="skill-badge">Pandas</span>
+                  <span className="skill-badge">Google Colab</span>
+                  <span className="skill-badge">Kaggle</span>
+                </div>
+              </div>
 
             </div>
           </div>
