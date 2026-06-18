@@ -705,7 +705,7 @@ export default function Home() {
 
                   <div className="w-full h-64 overflow-hidden rounded-2xl mb-8 border border-white/10">
                     <img
-                      src="/images/dtm.png"
+                      src="/images/DTM.png"
                       alt="DTM"
                       className="w-full h-full object-cover"
                     />
