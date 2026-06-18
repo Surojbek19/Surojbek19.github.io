@@ -326,7 +326,7 @@ export default function Home() {
               Skills
             </h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
               {/* Frontend */}
               <div className="premium-card p-8">
@@ -335,14 +335,32 @@ export default function Home() {
                 </h3>
 
                 <div className="flex flex-wrap gap-2">
+                  <span className="skill-badge">HTML</span>
+                  <span className="skill-badge">CSS</span>
+                  <span className="skill-badge">SASS</span>
+                  <span className="skill-badge">JavaScript</span>
+                  <span className="skill-badge">TypeScript</span>
+                  <span className="skill-badge">EJS</span>
                   <span className="skill-badge">React</span>
                   <span className="skill-badge">Next.js</span>
-                  <span className="skill-badge">TypeScript</span>
-                  <span className="skill-badge">JavaScript</span>
                   <span className="skill-badge">Redux</span>
+                  <span className="skill-badge">React Native</span>
+                  <span className="skill-badge">React Router</span>
+                  <span className="skill-badge">Axios</span>
+                  <span className="skill-badge">Socket.io Client</span>
+                  <span className="skill-badge">jQuery</span>
                   <span className="skill-badge">SCSS</span>
                   <span className="skill-badge">Tailwind CSS</span>
                   <span className="skill-badge">Material UI</span>
+                  <span className="skill-badge">SweetAlert2</span>
+                  <span className="skill-badge">Sonner</span>
+                  <span className="skill-badge">Anime.js</span>
+                  <span className="skill-badge">Framer Motion</span>
+                  <span className="skill-badge">Swiper</span>
+                  <span className="skill-badge">Typed.js</span>
+                  <span className="skill-badge">Three.js</span>
+                  <span className="skill-badge">TUI Editor</span>
+                  <span className="skill-badge">TUI Viewer</span>
                 </div>
               </div>
 
@@ -354,26 +372,19 @@ export default function Home() {
 
                 <div className="flex flex-wrap gap-2">
                   <span className="skill-badge">Node.js</span>
-                  <span className="skill-badge">NestJS</span>
                   <span className="skill-badge">Express.js</span>
-                  <span className="skill-badge">GraphQL</span>
-                  <span className="skill-badge">REST API</span>
-                  <span className="skill-badge">Apollo</span>
-                  <span className="skill-badge">JWT</span>
-                  <span className="skill-badge">WebSocket</span>
-                </div>
-              </div>
-
-              {/* Database */}
-              <div className="premium-card p-8">
-                <h3 className="text-2xl font-semibold mb-6">
-                  Database
-                </h3>
-
-                <div className="flex flex-wrap gap-2">
+                  <span className="skill-badge">Python</span>
                   <span className="skill-badge">MongoDB</span>
                   <span className="skill-badge">Mongoose</span>
                   <span className="skill-badge">MySQL</span>
+                  <span className="skill-badge">Express Session</span>
+                  <span className="skill-badge">JWT</span>
+                  <span className="skill-badge">Bcrypt.js</span>
+                  <span className="skill-badge">Multer</span>
+                  <span className="skill-badge">Socket.io</span>
+                  <span className="skill-badge">Cookie Parser</span>
+                  <span className="skill-badge">Dotenv</span>
+                  <span className="skill-badge">FormData</span>
                 </div>
               </div>
 
@@ -384,15 +395,17 @@ export default function Home() {
                 </h3>
 
                 <div className="flex flex-wrap gap-2">
-                  <span className="skill-badge">Docker</span>
-                  <span className="skill-badge">Linux</span>
+                  <span className="skill-badge">Linux (Ubuntu)</span>
                   <span className="skill-badge">Nginx</span>
+                  <span className="skill-badge">DNS</span>
+                  <span className="skill-badge">Firewall</span>
+                  <span className="skill-badge">Docker</span>
                   <span className="skill-badge">PM2</span>
-                  <span className="skill-badge">Git</span>
-                  <span className="skill-badge">GitHub</span>
-                  <span className="skill-badge">VPS</span>
+                  <span className="skill-badge">GitHub Pages</span>
+                  <span className="skill-badge">Render</span>
                 </div>
               </div>
+
               {/* AI / ML */}
               <div className="premium-card p-8">
                 <h3 className="text-2xl font-semibold mb-6">
@@ -400,11 +413,58 @@ export default function Home() {
                 </h3>
 
                 <div className="flex flex-wrap gap-2">
-                  <span className="skill-badge">Python</span>
+                  <span className="skill-badge">PyTorch</span>
+                  <span className="skill-badge">OpenCV</span>
                   <span className="skill-badge">NumPy</span>
                   <span className="skill-badge">Pandas</span>
+                  <span className="skill-badge">Matplotlib</span>
+                  <span className="skill-badge">Scikit-learn</span>
+                  <span className="skill-badge">Hugging Face</span>
+                  <span className="skill-badge">SentenceTransformers</span>
+                  <span className="skill-badge">PEFT (LoRA)</span>
+                  <span className="skill-badge">LLaMA</span>
+                  <span className="skill-badge">TinyLlama</span>
+                  <span className="skill-badge">Tokenizers</span>
+                  <span className="skill-badge">Qdrant</span>
+                  <span className="skill-badge">RAG</span>
                   <span className="skill-badge">Google Colab</span>
                   <span className="skill-badge">Kaggle</span>
+                  <span className="skill-badge">MobileNet</span>
+                </div>
+              </div>
+
+              {/* Patterns & Architecture */}
+              <div className="premium-card p-8">
+                <h3 className="text-2xl font-semibold mb-6">
+                  Patterns & Architecture
+                </h3>
+
+                <div className="flex flex-wrap gap-2">
+                  <span className="skill-badge">MVC</span>
+                  <span className="skill-badge">Middleware</span>
+                  <span className="skill-badge">Dependency Injection</span>
+                  <span className="skill-badge">Decorators</span>
+                </div>
+              </div>
+
+              {/* Tools */}
+              <div className="premium-card p-8">
+                <h3 className="text-2xl font-semibold mb-6">
+                  Tools
+                </h3>
+
+                <div className="flex flex-wrap gap-2">
+                  <span className="skill-badge">VSCode</span>
+                  <span className="skill-badge">Cursor</span>
+                  <span className="skill-badge">Postman</span>
+                  <span className="skill-badge">Yarn</span>
+                  <span className="skill-badge">NPM</span>
+                  <span className="skill-badge">NVM</span>
+                  <span className="skill-badge">Z Shell</span>
+                  <span className="skill-badge">FileZilla</span>
+                  <span className="skill-badge">GitHub</span>
+                  <span className="skill-badge">MongoDB Compass</span>
+                  <span className="skill-badge">Figma</span>
                 </div>
               </div>
 
