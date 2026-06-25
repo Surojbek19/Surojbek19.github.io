@@ -1,8 +1,14 @@
+"use client";
+
+import { useLanguage } from "./context/LanguageContext";
 import FadeInSection from "./components/FadeInSection";
 import Navbar from "./components/Navbar";
 
 
 export default function Home() {
+
+  const { t, lang } = useLanguage();
+
   return (
     <main
       className="
@@ -52,7 +58,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-blue-400 uppercase tracking-[0.3em] mb-6 text-sm">
-              Full-Stack Developer
+              {t.hero.role}
             </p>
 
             <h1 className="text-7xl lg:text-8xl font-bold leading-none mb-8">
@@ -62,9 +68,7 @@ export default function Home() {
             </h1>
 
             <p className="text-lg text-gray-300 max-w-xl mb-8">
-              Building scalable web applications, marketplaces,
-              and business platforms with modern technologies
-              including Next.js, NestJS, GraphQL, and MongoDB.
+              {t.hero.intro}
             </p>
 
             <div className="flex gap-10 mb-10">
@@ -72,14 +76,14 @@ export default function Home() {
               <div>
                 <h3 className="text-3xl font-bold">3+</h3>
                 <p className="text-gray-400 text-sm">
-                  Years Experience
+                  {t.hero.experience}
                 </p>
               </div>
 
               <div>
                 <h3 className="text-3xl font-bold">10+</h3>
                 <p className="text-gray-400 text-sm">
-                  Projects
+                  {t.hero.projects}
                 </p>
               </div>
 
@@ -90,15 +94,19 @@ export default function Home() {
                 href="#projects"
                 className="bg-blue-500 hover:bg-blue-600 transition px-8 py-4 rounded-xl font-medium"
               >
-                View Projects
+                {t.hero.buttonProjects}
               </a>
 
               <a
-                href="/documents/Surojbek_Sailkhonov_Resume.pdf"
+                href={
+                  lang === "ko"
+                    ? "/documents/Surojbek_Sailkhonov_Resume_KO.pdf"
+                    : "/documents/Surojbek_Sailkhonov_Resume_EN.pdf"
+                }
                 download
                 className="border border-white/20 hover:border-white/40 transition px-8 py-4 rounded-xl font-medium"
               >
-                Download CV
+                {t.hero.buttonCV}
               </a>
             </div>
           </div>
@@ -151,7 +159,7 @@ export default function Home() {
               </p>
 
               <h2 className="text-5xl font-bold">
-                About Me
+                {t.about.title}
               </h2>
             </div>
 
@@ -159,20 +167,12 @@ export default function Home() {
 
             <div className="max-w-4xl mb-20">
               <p className="text-xl text-gray-300 leading-9">
-                I am a Full-Stack Developer with 3 years of
-                professional experience building modern web
-                applications and digital platforms. My expertise
-                includes React, Next.js, TypeScript, Node.js,
-                NestJS, GraphQL, MongoDB, and Docker.
+                {t.about.description1}
 
                 <br />
                 <br />
 
-                I enjoy transforming ideas into real products and
-                creating user-focused experiences that are scalable,
-                maintainable, and visually appealing. My goal is
-                to build software that not only works efficiently
-                but also delivers meaningful value to users.
+                {t.about.description2}
               </p>
             </div>
 
@@ -186,7 +186,7 @@ export default function Home() {
                 </h3>
 
                 <p className="text-gray-400">
-                  Years Experience
+                  {t.about.experience}
                 </p>
               </div>
 
@@ -196,7 +196,7 @@ export default function Home() {
                 </h3>
 
                 <p className="text-gray-400">
-                  Completed Projects
+                  {t.about.projects}
                 </p>
               </div>
 
@@ -206,7 +206,7 @@ export default function Home() {
                 </h3>
 
                 <p className="text-gray-400">
-                  Years Full-Stack
+                  {t.about.fullStack}
                 </p>
               </div>
 
@@ -216,7 +216,7 @@ export default function Home() {
                 </h3>
 
                 <p className="text-gray-400">
-                  Years Frontend
+                  {t.about.front}
                 </p>
               </div>
 
@@ -231,7 +231,7 @@ export default function Home() {
               <div className="premium-card p-8">
 
                 <h3 className="text-3xl font-bold mb-8">
-                  Education
+                  {t.about.education}
                 </h3>
 
                 <div className="space-y-8">
@@ -242,7 +242,7 @@ export default function Home() {
                     </h4>
 
                     <p className="text-gray-400">
-                      Financial Management
+                      {t.about.major1}
                     </p>
 
                     <p className="text-gray-500 mt-2">
@@ -256,7 +256,7 @@ export default function Home() {
                     </h4>
 
                     <p className="text-gray-400">
-                      Business Administration
+                      {t.about.major2}
                     </p>
 
                     <p className="text-gray-500 mt-2">
@@ -273,36 +273,36 @@ export default function Home() {
               <div className="premium-card p-8">
 
                 <h3 className="text-3xl font-bold mb-8">
-                  Languages
+                  {t.about.language}
                 </h3>
 
                 <div className="space-y-5">
 
                   <div className="flex justify-between items-center">
-                    <span>Uzbek</span>
+                    <span>{t.about.uzbek}</span>
                     <span className="text-gray-400">
-                      Native
+                      {t.about.native}
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center">
-                    <span>Russian</span>
+                    <span>{t.about.russian}</span>
                     <span className="text-gray-400">
-                      Fluent
+                      {t.about.fluent}
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center">
-                    <span>English</span>
+                    <span>{t.about.english}</span>
                     <span className="text-gray-400">
-                      Fluent
+                      {t.about.fluent}
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center">
-                    <span>Korean</span>
+                    <span>{t.about.korean}</span>
                     <span className="text-gray-400">
-                      Fluent
+                      {t.about.intermedieted}
                     </span>
                   </div>
 
@@ -323,7 +323,7 @@ export default function Home() {
         >
           <div className="max-w-7xl mx-auto px-6 w-full">
             <h2 className="text-5xl font-bold mb-16">
-              Skills
+              {t.skills.skills}
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -489,7 +489,7 @@ export default function Home() {
                 </p>
 
                 <h2 className="text-5xl font-bold">
-                  Projects
+                  {t.projects.title}
                 </h2>
               </div>
               <div className="mt-40 grid lg:grid-cols-2 gap-12 items-center">
@@ -513,13 +513,7 @@ export default function Home() {
                   </h3>
 
                   <p className="text-gray-300 leading-8 mb-8">
-                    Vestra is a full-stack motorcycle marketplace
-                    platform designed to connect buyers and dealers
-                    through an intuitive user experience. The platform
-                    includes role-based authentication, advanced
-                    filtering, multilingual support, real-time
-                    communication, community features, and a complete
-                    dealer management system.
+                    {t.projects.description1}
                   </p>
 
                   <div className="flex flex-wrap gap-3 mb-8">
@@ -547,11 +541,11 @@ export default function Home() {
                   </div>
 
                   <div className="space-y-3 mb-10">
-                    <p>✓ Role-Based Authentication</p>
-                    <p>✓ Dealer Vehicle Management</p>
-                    <p>✓ Dynamic Filtering System</p>
-                    <p>✓ Real-Time Chatting</p>
-                    <p>✓ Multilingual Support</p>
+                    <p>✓ {t.projects.point1}</p>
+                    <p>✓ {t.projects.point2}</p>
+                    <p>✓ {t.projects.point3}</p>
+                    <p>✓ {t.projects.point4}</p>
+                    <p>✓ {t.projects.point5}</p>
                   </div>
 
                   <div className="flex gap-4">
@@ -585,12 +579,7 @@ export default function Home() {
                   </h3>
 
                   <p className="text-gray-300 leading-8 mb-8">
-                    EcoFlora is a modern e-commerce platform designed
-                    for plant enthusiasts. The platform provides a
-                    seamless shopping experience with product browsing,
-                    category management, user authentication, shopping
-                    cart functionality, and responsive design optimized
-                    for both desktop and mobile devices.
+                    {t.projects.description2}
                   </p>
 
                   <div className="flex flex-wrap gap-3 mb-8">
@@ -618,11 +607,11 @@ export default function Home() {
                   </div>
 
                   <div className="space-y-3 mb-10">
-                    <p>✓ Product Catalog Management</p>
-                    <p>✓ Shopping Cart System</p>
-                    <p>✓ User Authentication</p>
-                    <p>✓ Responsive Design</p>
-                    <p>✓ Product Categories & Search</p>
+                    <p>✓ {t.projects.bullet1}</p>
+                    <p>✓ {t.projects.bullet2}</p>
+                    <p>✓ {t.projects.bullet3}</p>
+                    <p>✓ {t.projects.bullet4}</p>
+                    <p>✓ {t.projects.bullet5}</p>
                   </div>
 
                   <div className="flex gap-4">
@@ -658,7 +647,7 @@ export default function Home() {
             <div>
 
               <h2 className="text-4xl font-bold mb-12">
-                Other Projects
+                {t.projects.title1}
               </h2>
 
               <div className="grid md:grid-cols-2 gap-8">
@@ -678,9 +667,7 @@ export default function Home() {
                   </h3>
 
                   <p className="text-gray-300 mb-6">
-                    A private experimental school combining IT
-                    education with project-based learning to develop creativity,
-                    problem-solving, and academic excellence.
+                    {t.projects.description3}
                   </p>
 
                   <div className="flex flex-wrap gap-2">
@@ -716,8 +703,7 @@ export default function Home() {
                   </h3>
 
                   <p className="text-gray-300 mb-6">
-                    A transportation platform that streamlines daily driving operations with route planning,
-                    GPS navigation, and real-time updates.
+                    {t.projects.description4}
                   </p>
 
                   <div className="flex flex-wrap gap-2">
@@ -760,7 +746,7 @@ export default function Home() {
               </p>
 
               <h2 className="text-5xl font-bold">
-                Experience
+                {t.experience.title}
               </h2>
             </div>
 
@@ -785,14 +771,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-gray-300 leading-8">
-                  Developed scalable web applications using
-                  Next.js, React, NestJS, GraphQL, and MongoDB.
-                  Built authentication systems, real-time chat,
-                  commenting features, advanced filtering, and
-                  role-based access control. Managed deployments
-                  using Docker, Nginx, VPS infrastructure, and
-                  CI/CD workflows while ensuring performance and
-                  cross-device compatibility.
+                  {t.experience.description1}
                 </p>
 
               </div>
@@ -816,11 +795,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-gray-300 leading-8">
-                  Developed responsive web interfaces using
-                  React, Next.js, TypeScript, SCSS, and Material UI.
-                  Built advanced filtering systems, authentication
-                  flows, real-time notifications, and reusable UI
-                  components while integrating GraphQL and REST APIs.
+                  {t.experience.description2}
                 </p>
 
               </div>
@@ -845,12 +820,11 @@ export default function Home() {
               </p>
 
               <h2 className="text-5xl font-bold mb-6">
-                Let's Work Together
+                {t.contact.title}
               </h2>
 
               <p className="text-gray-400 max-w-2xl mx-auto">
-                I'm always interested in discussing new projects,
-                collaborations, and opportunities.
+                {t.contact.description}
               </p>
 
             </div>
@@ -862,7 +836,7 @@ export default function Home() {
                 className="premium-card rounded-3xl p-8 block"
               >
                 <h3 className="text-xl font-semibold mb-3">
-                  Email
+                  {t.contact.email}
                 </h3>
 
                 <p className="text-gray-400">
@@ -876,7 +850,7 @@ export default function Home() {
                 className="premium-card rounded-3xl p-8 block"
               >
                 <h3 className="text-xl font-semibold mb-3">
-                  GitHub
+                  {t.contact.github}
                 </h3>
 
                 <p className="text-gray-400">
@@ -890,7 +864,7 @@ export default function Home() {
                 className="premium-card rounded-3xl p-8 block"
               >
                 <h3 className="text-xl font-semibold mb-3">
-                  LinkedIn
+                  {t.contact.linkedin}
                 </h3>
 
                 <p className="text-gray-400">
